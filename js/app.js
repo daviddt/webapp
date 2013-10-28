@@ -1,8 +1,8 @@
-'use strict';
-
 var FrisbeeApp = angular.module('frisbee', ['angular-gestures']);
 
 (function(){
+	
+	'use strict';
 
 	FrisbeeApp.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
 	  delete $httpProvider.defaults.headers.common['X-Requested-With'];
