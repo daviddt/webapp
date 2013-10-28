@@ -1,0 +1,32 @@
+<h1 class="banner">{{team.name}}</h1>
+
+<div class="profile">
+	<img src="{{team.profile_image_200}}" alt="{{team.name}}">
+	<p>Wins: {{team.wins}} - Losses: {{team.losses}}</p>
+</div>
+
+
+<h1 class="banner">Latest Results</h1>
+
+<table>
+
+	<thead>
+		<tr>
+
+			<th>Team 1</th>
+			<th>Result</th>
+			<th>Team 2</th>
+
+		</tr>
+	</thead>
+
+
+	<tr ng-repeat="score in scores">
+
+		<td ng-click="showTeam(score.team_1.id)">{{score.team_1.name}}</td>
+		<td ng-click="showMatch(score.id)">{{score.team_1_score}} - {{score.team_2_score}}</td>
+		<td ng-click="showTeam(score.team_2.id)">{{score.team_2.name}}</td>
+
+	</tr>
+
+</table>

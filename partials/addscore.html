@@ -1,0 +1,37 @@
+<div ng-show="displayLoadingIndicator" class="LoadingIndicator bubblingG">
+	<span id="bubblingG_1">
+	</span>
+	<span id="bubblingG_2">
+	</span>
+	<span id="bubblingG_3">
+	</span>
+</div>
+
+<h1 class="match_title">Add Score: {{match.team_1.name}} vs {{match.team_2.name}}</h1>
+
+<div class="wrapper match" ng-show="displayWrapper">
+
+	<article>
+
+
+		<div>
+			{{match.team_1.name}} <input ng-model="team1score" type="number" required>
+		</div>
+
+		<div>
+			{{match.team_2.name}} <input ng-model="team2score" type="number" required>
+		</div>
+
+		<div>
+			Final Score? <input type="checkbox" ng-model="isfinal" id="isfinal">
+		</div>
+
+		<div>
+			<button ng-click="submitScore()">Submit Score</button>
+		</div>
+
+
+
+	</article>
+	
+</div>

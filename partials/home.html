@@ -1,0 +1,86 @@
+<div ng-show="displayLoadingIndicator" class="LoadingIndicator bubblingG">
+	<span id="bubblingG_1">
+	</span>
+	<span id="bubblingG_2">
+	</span>
+	<span id="bubblingG_3">
+	</span>
+</div>
+
+<nav class="home_navigation" ng-class="filter">
+	<a href="" ng-click="filter='latest'" value="set">Latest</a>
+	<a href="" ng-click="filter='upcoming'" value="set">Upcoming</a>
+</nav>
+
+<div class="wrapper">
+
+	<section class="latest">
+
+		<article ng-repeat="item in latest" class="item">
+
+			<div class="front" hm-tap="viewOptions($event)">
+				<div class="counter">
+					{{$index + 1}}
+				</div>	
+				<div class="score">
+					<span class="team1">{{item.team_1.name}}</span> 
+					<span class="team1score">{{item.team_1_score}}</span> 
+					<span class="team2">{{item.team_2.name}}</span> 
+					<span class="team2score">{{item.team_2_score}}</span>
+				</div>
+				<div class="more">
+					<i class="icon-angle-right"></i>
+				</div>
+			</div>
+
+			<div class="back">
+				<a href="#/addscore/{{item.game_id}}">
+					<i class="icon-pencil"></i>
+					Edit
+				</a>
+
+				<a href="#/match/{{item.game_id}}">
+					<i class="icon-eye-open"></i>
+					View
+				</a>
+			</div>
+
+		</article>
+
+	</section>
+
+	<section class="upcoming">
+
+		<article ng-repeat="item in upcoming" class="item">
+
+			<div class="front" hm-tap="viewOptions($event)">
+				<div class="counter">
+					{{$index + 1}}
+				</div>	
+				<div class="score">
+					<span class="team1">{{item.team_1.name}}</span> 
+					<span class="team2">{{item.team_2.name}}</span> 
+					<span class="matchdate">{{toDate(item.start_time)}}</span>
+				</div>
+				<div class="more">
+					<i class="icon-angle-right"></i>
+				</div>
+			</div>
+
+			<div class="back">
+				<a href="#/addscore/{{item.id}}">
+					<i class="icon-pencil"></i>
+					Edit
+				</a>
+
+				<a href="#/match/{{item.id}}">
+					<i class="icon-eye-open"></i>
+					View
+				</a>
+			</div>
+
+		</article>
+
+	</section>
+
+</div>
