@@ -1,8 +1,8 @@
-'use strict';
-
 /* Controllers */
 
 (function(){
+	
+	'use strict';
 
 	var config = {
 		api_url : 'https://api.leaguevine.com/v1/',
