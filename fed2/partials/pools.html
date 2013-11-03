@@ -1,3 +1,13 @@
+<div ng-show="displayLoadingIndicator" class="LoadingIndicator bubblingG">
+	<span id="bubblingG_1">
+	</span>
+	<span id="bubblingG_2">
+	</span>
+	<span id="bubblingG_3">
+	</span>
+</div>
+
+
 <section ng-repeat="pool in pools | reverse" class="pool">
 
 	<h1>Pool {{pool.name}}</h1>
@@ -8,7 +18,7 @@
 			<tr>
 
 				<th ng-click="order = 'team.name'; reverse = false" ng-class="{active: order == 'team.name'}">Name</th>
-				<th ng-click="order = 'games_played'; reverse = false" ng-class="{active: order == 'games_played'}">Games Played</th>
+				<th ng-click="order = 'plus_minus'; reverse = true" ng-class="{active: order == 'plus_minus'}">+/-</th>
 				<th ng-click="order = 'wins'; reverse = true" ng-class="{active: order == 'wins'}">Wins</th>
 				<th ng-click="order = 'losses'; reverse = true" ng-class="{active: order == 'losses'}">Losses</th>
 
@@ -20,7 +30,7 @@
 			<tr ng-repeat="standing in pool.standings | orderBy:order:reverse" >
 
 				<td ng-click="showTeam(standing.team_id)">{{standing.team.name}}</td>
-				<td>{{standing.games_played}}</td>
+				<td>{{standing.plus_minus}}</td>
 				<td>{{standing.wins}}</td>
 				<td>{{standing.losses}}</td>
 

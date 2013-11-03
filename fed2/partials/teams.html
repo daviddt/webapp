@@ -1,0 +1,42 @@
+<div ng-show="displayLoadingIndicator" class="LoadingIndicator bubblingG">
+	<span id="bubblingG_1">
+	</span>
+	<span id="bubblingG_2">
+	</span>
+	<span id="bubblingG_3">
+	</span>
+</div>
+
+
+<section class="teams">
+
+	<h1>All Teams</h1>
+
+	<table>
+
+		<thead>
+			<tr>
+
+				<th>Name</th>
+				<th>Team page</th>
+
+			</tr>
+
+		</thead>
+
+		<tbody>
+	
+			<tr ng-repeat="team in teams">
+
+				<td>{{team.team.name}}</td>
+				<td ng-click="showTeam(team.team.id)"><span class="arrow">></span></td>
+
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+</section>
+

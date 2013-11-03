@@ -1,3 +1,4 @@
+
 <div ng-show="displayLoadingIndicator" class="LoadingIndicator bubblingG">
 	<span id="bubblingG_1">
 	</span>
@@ -6,6 +7,7 @@
 	<span id="bubblingG_3">
 	</span>
 </div>
+
 
 <nav class="home_navigation" ng-class="filter">
 	<a href="" ng-click="filter='latest'" value="set">Latest</a>
@@ -18,7 +20,7 @@
 
 		<article ng-repeat="item in latest" class="item">
 
-			<div class="front" hm-tap="viewOptions($event)">
+			<div class="front" hm-tap="viewOptions($event)" hm-swipe-right="viewOptions($event)">
 				<div class="counter">
 					{{$index + 1}}
 				</div>	

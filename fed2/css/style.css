@@ -353,7 +353,7 @@ div.match > article > div > a, .match button {
 
 /* POOL PAGE */
 
-.pool > h1, .banner {
+.pool > h1, .banner, .teams > h1 {
 	background-color:#60b28a;
 	font-weight:normal;
 	text-align:center;
@@ -383,9 +383,18 @@ td {
 	border:1px solid #e5e6e6;
 }
 
+td .arrow {
+	font-size: 2em;
+	color: #cccfd1;
+}
+
 th.active {
 	color:#fff;
 	background-color:#da665c;
+}
+
+.teams tr td:nth-of-type(2) {
+	text-align:center;
 }
 
 .profile {
@@ -410,6 +419,19 @@ th.active {
 	width:35%;
 	overflow:hidden;
 	text-overflow:ellipsis;
+}
+
+.rules {
+	background-color:#eff0f0;
+	padding:2em;
+}
+
+.rules a {
+	color:#31414a;
+}
+
+.rules ol {
+	padding:2em;
 }
 
 .LoadingIndicator {
