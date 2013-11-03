@@ -1,8 +1,13 @@
+<<<<<<< HEAD:fed2/js/controllers.js
 
 
+=======
+>>>>>>> 0ef0559abc7a01a2c16e35a06009991fb34c6f79:js/controllers.js
 /* Controllers */
 
 (function(){
+	
+	'use strict';
 
 	'use strict';
 
