@@ -55,7 +55,7 @@
 
 		<article ng-repeat="item in upcoming" class="item">
 
-			<div class="front" hm-tap="viewOptions($event)">
+			<div class="front"  hm-tap="viewOptions($event)" hm-swipe-right="viewOptions($event)">
 				<div class="counter">
 					{{$index + 1}}
 				</div>	

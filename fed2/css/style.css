@@ -146,6 +146,10 @@ section.upcoming {
 	position:relative;
 }
 
+.match .back a {
+	background-color:#60b28a;
+}
+
 .item .front {
 	border-top:1px solid #e5e6e6;
 	-webkit-transition: 0.5s all;

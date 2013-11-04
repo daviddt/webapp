@@ -1,13 +1,10 @@
-<<<<<<< HEAD:fed2/js/controllers.js
 
 
-=======
->>>>>>> 0ef0559abc7a01a2c16e35a06009991fb34c6f79:js/controllers.js
 /* Controllers */
 
+
+
 (function(){
-	
-	'use strict';
 
 	'use strict';
 
@@ -124,8 +121,8 @@
 		$scope.order = 'wins';
 		$scope.reverse = true;
 
-		$http.get(config.api_url+'pools/?tournament_id='+config.tournament_id+'&fields=%5Bstandings%5D&'+config.acces_token).success(function(data) {
-			$scope.pools = data.objects;
+		$http.get(config.api_url+'pools/?tournament_id='+config.tournament_id+'&'+config.acces_token).success(function(data) {
+			$scope.pools = data.objects.slice().reverse(); // keer het om :////
 			$scope.displayLoadingIndicator = false;
 
 		});
