@@ -1,5 +1,4 @@
 
-
 /* Controllers */
 
 
@@ -96,7 +95,8 @@
 		$scope.viewOptions = function(ev){
 			angular.element(ev.currentTarget).parent().toggleClass('active');
 		}
-
+		
+		//Moment.js library
 		/* date string omrekenen naar bruikbare data.... */	
 		$scope.toDate = function(date) {
 			var time = new Date(date);
